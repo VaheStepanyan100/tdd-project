@@ -37,5 +37,20 @@ describe Solver do
       expect(@solver.fizzbuzz(1)).to eq '1'
       expect(@solver.fizzbuzz(2)).to eq '2'
     end
+
+    it 'returns "fizz" for numbers divisible by 3' do
+      expect(@solver.fizzbuzz(3)).to eq('fizz')
+      expect(@solver.fizzbuzz(9)).to eq('fizz')
+    end
+
+    it 'returns "buzz" for numbers divisible by 5' do
+      expect(@solver.fizzbuzz(5)).to eq('buzz')
+      expect(@solver.fizzbuzz(25)).to eq('buzz')
+    end
+
+    it 'returns "fizzbuzz" for numbers divisible by both 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to eq 'fizzbuzz'
+      expect(@solver.fizzbuzz(30)).to eq 'fizzbuzz'
+    end
   end
 end
