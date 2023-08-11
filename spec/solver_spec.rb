@@ -31,4 +31,11 @@ describe Solver do
       expect(@solver.reverse('string')).to eq 'gnirts'
     end
   end
+
+  context '#fizzbuzz' do
+    it 'returns the number as a string when not divisible by 3 or 5' do
+      expect(@solver.fizzbuzz(1)).to eq '1'
+      expect(@solver.fizzbuzz(2)).to eq '2'
+    end
+  end
 end
