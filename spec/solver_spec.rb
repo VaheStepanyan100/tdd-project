@@ -24,4 +24,11 @@ describe Solver do
       expect { @solver.factorial(-10) }.to raise_error(ArgumentError)
     end
   end
+
+  context '#reverse' do
+    it 'reverse a word' do
+      expect(@solver.reverse('cat')).to eq 'tac'
+      expect(@solver.reverse('string')).to eq 'gnirts'
+    end
+  end
 end
